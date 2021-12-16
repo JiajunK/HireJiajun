@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body
+{
+    overflow-x: hidden;
+    background : #ABDED6;
+    min-height: 100vh;
+}
+
+#header
+{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+#header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 65%;
+}
+
+#header ul li
+{
+    list-style: none;
+    margin-right: 30px;
+}
+
+#header ul li a
+{
+    text-decoration: none;
+    color: #427AA1;
+}
+
+#header ul li a:hover,
+#header ul li a.active
+{
+    background: #427AA1;
+    color: #FFFAFB;
+    padding: 15px;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    heights: 10%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section::before
+{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+section #text
+{
+    postition: absolute;
+    color: azure;
+    font-size: 9vw;
+    text-align: center;
+}
+
+.secA
+ {
+     position: relative;
+     padding: 100px;
+     background: #7A89C2;
+ }
+
+.secA h2
+{
+    font-size: 3.5em;
+    color: #FFFAFB;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.secA p
+{
+    font-size: 1.5em;
+    padding-top: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    color: #FFFAFB;
+}
+
+.secB
+{
+    position: relative;
+    padding: 100px;
+    background: #427AA1;
+}
+
+.secB h2
+{
+    font-size: 3.5em;
+    color: #FFFAFB;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.secB p
+{
+    color: #FFFAFB;
+    font-size: 1.5em;
+    padding-top: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.secC
+{
+    position: relative;
+    padding: 100px;
+    background: #ABDED6;
+}
+
+.secC h2
+{
+    font-size: 3.5em;
+    color: #FFFAFB;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.secC p
+{
+    font-size: 1.5em;
+    padding-top: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    color: #2B2C28;
+}
+
+.title
+{
+    font-size: 2em;
+    color: #FFFAFB;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+#subtitle
+{
+    font-size: 28px;
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    color:#2B2C28;
+}
+
+#contactInfo
+{
+    font-size: 2em;
+    float: left;
+    position: relative;
+    left: 40%;
+    color: #FFFAFB;
+    list-style-type: none;
+}
+
+
+
+#contactInfo li
+{
+    margin-bottom: 20px;
+    text-align: left;
+    list-style-type: none;
+}
+
+#contactInfo img
+{
+    width: 60px;
+    margin-right: 20px;
+}
+
+.projects
+{
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    table-layout: fixed;
+}
+
+.project-images
+{
+    width: 50%;
+}
+
+.project-subtitles
+{
+    margin-bottom: 30px;
+}
+
+.essay
+{
+    text-align: center;
+    table-layout: fixed;
+    margin: 5% 10% 5% 10%;
+}
+
+.writing
+{
+    padding: 5% 10% 5% 10%;
+    line-height: 1.5;
+}
+
+.back
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.back a:hover
+{
+    background: #427AA1;
+    color: #FFFAFB;
+    padding: 15px;
+}
